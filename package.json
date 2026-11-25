@@ -1,0 +1,14 @@
+{
+  "name": "sigai-activos-informaticos",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Sistema Integral de Gestión de Activos Informáticos y Mantenimiento",
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000",
+    "start": "npx --yes serve . -l 3000"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

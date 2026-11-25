@@ -1,0 +1,76 @@
+@media print {
+  .sidebar,
+  .sidebar-backdrop,
+  .top,
+  .sync-bar,
+  .head .btns,
+  .tabs,
+  .replist,
+  .filters,
+  .lnk {
+    display: none !important;
+  }
+
+  .main {
+    margin: 0 !important;
+  }
+
+  body {
+    background: #fff !important;
+  }
+
+  #view {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .pane {
+    display: block !important;
+    margin-bottom: 18px;
+    break-inside: avoid;
+  }
+
+  .ptitle {
+    display: block;
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--navy);
+  }
+
+  .panel {
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .repgrid {
+    display: block !important;
+  }
+
+  body[data-route="reportes"] .head {
+    display: none !important;
+  }
+
+  .solo-print {
+    display: block !important;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .solo-print h2 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 16px;
+  }
+
+  .solo-print p {
+    margin: 3px 0 0;
+    color: var(--mu);
+    font-size: 12px;
+  }
+
+  .reptitle {
+    font-size: 16px;
+  }
+}

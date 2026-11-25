@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sistema Integral de Gestión de Activos Informáticos y Mantenimiento">
+  <title>SIGAI · Gestión de Activos Informáticos</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/layout.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/views.css">
+  <link rel="stylesheet" href="/src/styles/print.css">
+</head>
+<body>
+  <div id="sync-bar" class="sync-bar" aria-hidden="true"></div>
+  <div id="app-shell">
+    <div id="sidebar-backdrop" class="sidebar-backdrop" hidden></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zM8 20h8M12 16v4"/></svg>
+        </div>
+        <div>
+          <b>SIGAI</b>
+          <span>Activos TI y Mantenimiento</span>
+        </div>
+      </div>
+      <nav id="menu" aria-label="Módulos del sistema"></nav>
+      <div class="sidebar-foot">
+        <div class="conn-pill" id="conn-status">
+          <span class="dot"></span>
+          <span class="conn-text">Servicio activo</span>
+        </div>
+        <span class="ver-tag">v2.0</span>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="top">
+        <button class="icon-btn" id="burger" type="button" aria-label="Abrir menú"></button>
+        <div class="top-title">
+          <h1>Sistema Integral de Gestión de Activos Informáticos</h1>
+        </div>
+        <div class="search">
+          <input id="q" type="search" placeholder="Buscar equipo por código, modelo o serie..." autocomplete="off">
+          <div class="drop" id="res" hidden></div>
+        </div>
+        <div class="tools">
+          <span id="fecha"></span>
+          <div class="rel">
+            <button class="icon-btn" id="bell" type="button" aria-label="Notificaciones"></button>
+            <div class="drop right" id="notif" hidden></div>
+          </div>
+          <div class="rel">
+            <button class="user-btn" id="user-menu-btn" type="button" aria-label="Menú de usuario"></button>
+            <div class="drop right user-drop" id="user-drop" hidden></div>
+          </div>
+        </div>
+      </header>
+      <main id="view"></main>
+    </div>
+  </div>
+  <div id="auth-root" hidden></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

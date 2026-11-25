@@ -1,0 +1,24 @@
+export class EventBus {
+  constructor() {
+    this.listeners = new Map();
+  }
+
+  on(event, handler) {
+    if (!this.listeners.has(event)) {
+      this.listeners.set(event, new Set());
+    }
+    this.listeners.get(event).add(handler);
+    return () => this.off(event, handler);
+  }
+
+  off(event, handler) {
+    const group = this.listeners.get(event);
+    if (group) group.delete(handler);
+  }
+
+  emit(event, payload) {
+    const group = this.listeners.get(event);
+    if (!group) return;
+    group.forEach(fn => fn(payload));
+  }
+}
